@@ -12,8 +12,8 @@ using PescaAPI.Data;
 namespace PescaAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241101143630_initial")]
-    partial class initial
+    [Migration("20241101170239_inialcreate")]
+    partial class inialcreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -103,8 +103,8 @@ namespace PescaAPI.Migrations
                     b.Property<decimal>("Preco")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<Guid>("QuantidadeEstoque")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("QuantidadeEstoque")
+                        .HasColumnType("int");
 
                     b.Property<Guid?>("VendaId")
                         .HasColumnType("uniqueidentifier");

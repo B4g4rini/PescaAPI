@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PescaAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class inialcreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -70,7 +70,7 @@ namespace PescaAPI.Migrations
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Preco = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    QuantidadeEstoque = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    QuantidadeEstoque = table.Column<int>(type: "int", nullable: false),
                     FornecedorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     VendaId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
